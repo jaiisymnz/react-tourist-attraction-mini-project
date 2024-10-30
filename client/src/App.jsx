@@ -1,7 +1,13 @@
+import PostCard from "./components/PostCard";
+
 import "./App.css";
 
 function App() {
-  return <div className="App">{/* Start coding here */}</div>;
+  return (
+    <div className="App">
+      <PostCard/>
+    </div>
+  );
 }
 
 export default App;
