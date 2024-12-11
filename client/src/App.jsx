@@ -1,12 +1,13 @@
-import PostCard from "./components/PostCard";
-
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import PostCard from './components/PostCard';
 
 function App() {
   return (
-    <div className="App">
-      <PostCard/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<PostCard />} />
+      </Routes>
+    </Router>
   );
 }
 
