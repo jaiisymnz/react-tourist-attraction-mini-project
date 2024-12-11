@@ -1,3 +1,17 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "version": 2,
+  "builds": [
+    {
+      "src": "client/package.json",
+      "use": "@vercel/node",
+      "config": {
+        "zeroConfig": true
+      }
+    },
+    {
+      "src": "client/vite.config.js",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "outputDirectory": "dist"
 }
