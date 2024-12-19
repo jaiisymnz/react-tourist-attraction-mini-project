@@ -3,8 +3,11 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "./", // ตรวจสอบว่า base เป็น '/' (root)
+  base: "./", // รองรับการอ้างอิง asset แบบ relative path
   build: {
-    outDir: "dist", // กำหนด Output Directory สำหรับ build
+    outDir: "dist", // กำหนด output directory
+    rollupOptions: {
+      input: "./index.html", // กำหนด entry point เป็น index.html
+    },
   },
 });
